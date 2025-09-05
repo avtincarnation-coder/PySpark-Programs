@@ -1,3 +1,4 @@
-from datetime import date
+x = 10
+y = 20
 
-print(date.today())
+print(x+y)
