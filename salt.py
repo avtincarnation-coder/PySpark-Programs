@@ -29,7 +29,9 @@ lower_join = df_smaller.crossJoin(salts)
 
 salted_smaller = lower_join.withColumn("salted_key",concat_ws("_",col("customer_id"),col("salt"))).show()
 
-final_result =  salted_large.join(salted_smaller,"salted_key").show()
+final_result =  salted_large.join(salted_smaller,"salted_key")
+
+final_result.show(truncate=TRUE)
 
 
 
