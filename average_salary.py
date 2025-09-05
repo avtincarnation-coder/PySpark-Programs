@@ -5,7 +5,7 @@ from pyspark.sql.types import *
 spark = SparkSession.builder.appName("average salary").getOrCreate()
 
 data = [
-("HR", "2020", 2500),
+("HR", "2020", 5000),
 ("HR", "2021", 3200),
 ("HR", "2022", 2800),
 ("Engineering", "2020", 5000),
