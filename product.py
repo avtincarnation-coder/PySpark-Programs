@@ -24,6 +24,7 @@ df_notnull = df_filled.filter(col("product").isNotNull())
 
 df_one = df_notnull.fillna({"quantity":1})
 
+df_one.show()
 
 
 
