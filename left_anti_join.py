@@ -11,5 +11,7 @@ data_dept = [("finanace",100),("hr",400)]
 
 deptDf = spark.createDataFrame(data_dept,["deptname","deptid"])
 
-leftanti_result = empDf.join(deptDf,on = "deptid", how="left_anti").show()
+leftanti_result = empDf.join(deptDf,on = "deptid", how="left_anti")
+
+leftanti_result.show(truncate=False)
 
