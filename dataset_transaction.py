@@ -23,6 +23,8 @@ df_topthree = df.join(df_topusers,on="user_id",how="inner").select("user_id","tr
 
 wind_spec = Window.partitionBy("user_id").orderBy(col("transaction_date").desc())
 
-final_result = df_topthree.withColumn("rank",rank().over(wind_spec)).filter(col("rank")==1).drop("rank").show()
+final_result = df_topthree.withColumn("rank",rank().over(wind_spec)).filter(col("rank")==1).drop("rank")
+
+final_result.show(truncate=False)
 
 
