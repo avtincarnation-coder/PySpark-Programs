@@ -24,5 +24,9 @@ window_spec = Window.partitionBy("dept").orderBy(col("total_present").desc())
 
 final_result = df_present.withColumn("rank",rank().over(window_spec)).filter(col("rank")==1).drop("rank","emp_id")
 
-final_result.select("dept","emp_name","total_present").show(truncate=True)
+final_result.select("dept","emp_name","total_present")
+
+final_result.show(truncate=False)
+
+
 
