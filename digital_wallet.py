@@ -25,7 +25,9 @@ df_last =  df.withColumn("rnum",row_number().over(wsec_last)).filter(col("rnum")
 
 df_final_result = df_first.unionAll(df_last)
 
-df_final_result.orderBy(col("customer_id"),col("txn_date").asc()).show(truncate=False)
+df_final_result.orderBy(col("customer_id"),col("txn_date").asc())
+
+df_final_result.show(truncate=False)
 
 
 
