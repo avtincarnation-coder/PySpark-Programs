@@ -8,7 +8,7 @@ rdd = sc.parallelize(data)
 
 rdd_map = rdd.map(lambda x : x*2)
 
-print(rdd_map.collect())
+print(rdd_map.take(5))
 
 rdd_filter = rdd.filter(lambda x : x>50)
 
