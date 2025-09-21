@@ -1,7 +1,16 @@
-list1 = [3,5,4,6]
-list2 = [7,8,3,2]
+def replacenull(str1, ch):
+    if str1 == '':
+        print('String is empty')
+        return ''
 
-new_list = list1.extend(list2)
+    final_str = ''
+    for i in str1:
+        if i == ' ':  # replace spaces
+            final_str += ch
+        else:
+            final_str += i
+    return final_str
 
-print(new_list)
 
+x = ''
+print(replacenull(x, 'a'))
