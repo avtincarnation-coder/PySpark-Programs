@@ -12,5 +12,5 @@ def replacenull(str1, ch):
     return final_str
 
 
-x = ''
+x = 'vf jrs vfs jtjr'
 print(replacenull(x, 'a'))
